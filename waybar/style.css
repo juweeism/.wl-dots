@@ -1,0 +1,274 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    margin-bottom: 0px; 
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+
+#mode {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 9px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#cpu, #memory {
+    color: #303030
+}
+
+#window,
+#workspaces {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+}
+.modules-left > widget:last-child > #workspaces {
+    margin-left: 6px;
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child {
+    margin-right: 6px;
+}
+
+#clock {
+    border-radius: 99px;
+}
+
+#battery {
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+    margin-right: 9px;
+    padding-right: 20px;
+}
+
+#battery.charging, #battery.plugged {
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    border-bottom-left-radius: 99px;
+    border-top-left-radius: 99px;
+}
+
+#memory {
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network {
+}
+
+#network.disconnected {
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#wireplumber {
+}
+
+#wireplumber.muted {
+}
+
+#custom-media {
+}
+
+#custom-media.custom-spotify {
+}
+
+#custom-media.custom-vlc {
+}
+
+#temperature {
+}
+
+#temperature.critical {
+}
+
+#tray {
+    background-color: transparent;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#idle_inhibitor {
+}
+
+#idle_inhibitor.activated {
+    color: #2d3436;
+}
+
+#mpd {
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+}
+
+#mpd.disconnected {
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+}
+
+#mpd.stopped {
+}
+
+#mpd.paused {
+}
+
+#language {
+    color: #740864;
+    padding: 0 3px;
+    margin: 0 3px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 3px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 3px;
+}
+
+#keyboard-state > label.locked {
+}
+
+#scratchpad {
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces {
+    margin: 0; 
+    padding: 0;
+}
+
+button:hover {
+    background: inherit;
+}
+
+#workspaces button {
+    margin: 0;
+    color: #9090aa;
+    padding-top: 0;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+}
+
+#workspaces button.active {
+    margin-top: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
