@@ -49,6 +49,11 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+require('lspconfig')['tsserver'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
+}
 require('lspconfig')['emmet_ls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
@@ -62,6 +67,10 @@ require('lspconfig')['lua_ls'].setup{
     flags = lsp_flags,
 }
 require('lspconfig')['pyright'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['astro'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
