@@ -22,6 +22,8 @@ return require('packer').startup({function()
 	use "windwp/nvim-autopairs" 		-- auto pair "" () {} 
 	use "junegunn/limelight.vim" 		-- distraction free vim
 
+    use "nvim-lua/plenary.nvim"
+
 	use "neovim/nvim-lspconfig" 		-- lsp servers
 	use "hrsh7th/cmp-nvim-lsp" 		-- lsp server completion
 	use "hrsh7th/cmp-buffer" 			-- buffer completion 
