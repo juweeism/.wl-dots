@@ -114,10 +114,10 @@ _G.packer_plugins = {
     path = "/home/jami/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["everforest-nvim"] = {
+  ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/home/jami/.local/share/nvim/site/pack/packer/start/everforest-nvim",
-    url = "https://github.com/neanias/everforest-nvim"
+    path = "/home/jami/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["jupynium.nvim"] = {
     loaded = true,
@@ -169,11 +169,6 @@ _G.packer_plugins = {
     path = "/home/jami/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/home/jami/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/jami/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -183,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jami/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  playground = {
-    loaded = true,
-    path = "/home/jami/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
