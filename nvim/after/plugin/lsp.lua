@@ -59,7 +59,6 @@ require("lspconfig")["tsserver"].setup({
 		"typescript",
 		"typescriptreact",
 		"typescript.tsx",
-		"svelte",
 	},
 })
 require("lspconfig")["emmet_ls"].setup({
